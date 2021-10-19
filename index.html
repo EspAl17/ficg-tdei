@@ -1,6 +1,6 @@
 <html>
   <body style="background-color:black;">
-    <video width = "100%" autoplay loop style="position: fixed;
+    <video id = "myvid" control style="position: fixed;
       right: 0;
       bottom: 0;
       min-width: 100%;
@@ -8,9 +8,9 @@
       <source src="Video-TdeI.mp4" type="video/mp4">
     </video>
     <script>
-        var timer = setTimeout(function() {
-            window.location='https://stackoverflow.com/questions/3292038/redirect-website-after-specified-amount-of-time'
-        }, 3000);
+        video = document.getElementById('myvid');
+        video.addEventListener('ended',function() {alert('video is ended');       
+        window.location.href = 'http://www.google.com';})
     </script>
   </body>
 </html>
